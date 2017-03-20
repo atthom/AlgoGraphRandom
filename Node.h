@@ -14,14 +14,18 @@
 #ifndef NODE_H
 #define NODE_H
 
+#include <vector>
+
 class Node {
 public:
-    Node();
-    Node(const Node& orig);
+    Node(int id);
+    addSucc(Node);
+    
     virtual ~Node();
 private:
-    
-
+    // successors
+    int id;
+    vector<Node> succ;
 };
 
 #endif /* NODE_H */

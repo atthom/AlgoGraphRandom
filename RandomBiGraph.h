@@ -16,16 +16,24 @@
 
 class RandomBiGraph {
 public:
-    RandomBiGraph(int nb, int nb2, float p);
+    RandomBiGraph(int nb, int nb2, float p);   
+    bool isMaximum();
+    bool isMaximal();
+    bool isPerfect();    
     
     virtual ~RandomBiGraph();
+    
 private:
+    
     int nb_sommet1;
     int nb_sommet2;
     float p;
-    Node left[nb_sommet1];
-    Node right[nb_sommet2];
     
+    Node left[nb_sommet1];
+    Edge left_edge[nb_sommet1];
+    
+    Node right[nb_sommet2];
+    Edge right_edge[nb_sommet2];
 
 };
 

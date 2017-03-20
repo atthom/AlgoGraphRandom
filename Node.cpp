@@ -13,10 +13,12 @@
 
 #include "Node.h"
 
-Node::Node() {
+Node::Node(int id) {
+    Node.id = id;    
 }
 
-Node::Node(const Node& orig) {
+Node::addSucc(Node foo) {
+    Node.succ.insert(foo);
 }
 
 Node::~Node() {
