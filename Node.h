@@ -20,6 +20,7 @@ public:
     Node(const Node& orig);
     virtual ~Node();
 private:
+    
 
 };
 

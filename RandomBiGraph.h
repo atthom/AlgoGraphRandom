@@ -23,6 +23,8 @@ private:
     int nb_sommet1;
     int nb_sommet2;
     float p;
+    Node left[nb_sommet1];
+    Node right[nb_sommet2];
     
 
 };
