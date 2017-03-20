@@ -5,21 +5,22 @@
  */
 
 /* 
- * File:   RandomGraph.cpp
+ * File:   Edge.h
  * Author: chronos
- * 
- * Created on March 20, 2017, 6:28 PM
+ *
+ * Created on March 20, 2017, 8:45 PM
  */
 
-#include "RandomGraph.h"
+#ifndef EDGE_H
+#define EDGE_H
 
-RandomGraph::RandomGraph() {
-}
+class Edge {
+public:
+    Edge();
+    virtual ~Edge();
+private:
 
-RandomGraph::RandomGraph(const RandomGraph& orig) {
-    
-}
+};
 
-RandomGraph::~RandomGraph() {
-}
+#endif /* EDGE_H */
 

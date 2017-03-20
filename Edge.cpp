@@ -5,21 +5,20 @@
  */
 
 /* 
- * File:   RandomGraph.cpp
+ * File:   Edge.cpp
  * Author: chronos
  * 
- * Created on March 20, 2017, 6:28 PM
+ * Created on March 20, 2017, 8:45 PM
  */
 
-#include "RandomGraph.h"
+#include "Edge.h"
 
-RandomGraph::RandomGraph() {
+Edge::Edge() {
 }
 
-RandomGraph::RandomGraph(const RandomGraph& orig) {
-    
+Edge::Edge(const Edge& orig) {
 }
 
-RandomGraph::~RandomGraph() {
+Edge::~Edge() {
 }
 

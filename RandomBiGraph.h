@@ -16,10 +16,14 @@
 
 class RandomBiGraph {
 public:
-    RandomBiGraph();
-    RandomBiGraph(const RandomBiGraph& orig);
+    RandomBiGraph(int nb, int nb2, float p);
+    
     virtual ~RandomBiGraph();
 private:
+    int nb_sommet1;
+    int nb_sommet2;
+    float p;
+    
 
 };
 

@@ -10,14 +10,16 @@
  * 
  * Created on March 20, 2017, 6:28 PM
  */
-
+#include <cstdlib>
+#include <iostream>
+#include <ctime>
 #include "RandomBiGraph.h"
 
-RandomBiGraph::RandomBiGraph() {
+RandomBiGraph(int nb, int nb2, float p) {
+    std::srand(std::time(0));
+    
 }
 
-RandomBiGraph::RandomBiGraph(const RandomBiGraph& orig) {
-}
 
 RandomBiGraph::~RandomBiGraph() {
 }

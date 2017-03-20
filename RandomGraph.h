@@ -19,8 +19,11 @@ public:
     RandomGraph();
     RandomGraph(const RandomGraph& orig);
     virtual ~RandomGraph();
+    
 private:
-
+    int nbSommet;
+    
+    
 };
 
 #endif /* RANDOMGRAPH_H */
