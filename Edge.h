@@ -17,6 +17,9 @@
 class Edge {
 public:
     Edge();
+
+    Edge(const Edge &orig);
+
     virtual ~Edge();
 private:
 

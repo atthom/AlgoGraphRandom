@@ -14,17 +14,19 @@
 #ifndef RANDOMBIGRAPH_H
 #define RANDOMBIGRAPH_H
 
+#include "Node.h"
+
 class RandomBiGraph {
 public:
-    RandomBiGraph(int nb, int nb2, float p);
-    
+    RandomBiGraph(int nb1, int nb2, float p);
+
     virtual ~RandomBiGraph();
 private:
-    int nb_sommet1;
-    int nb_sommet2;
+    const int nb_sommet1;
+    const int nb_sommet2;
     float p;
-    Node left[nb_sommet1];
-    Node right[nb_sommet2];
+    Node* left;
+    Node* right;
     
 
 };

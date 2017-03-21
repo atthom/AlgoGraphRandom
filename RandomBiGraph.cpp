@@ -10,17 +10,19 @@
  * 
  * Created on March 20, 2017, 6:28 PM
  */
-#include <cstdlib>
-#include <iostream>
-#include <ctime>
+
 #include "RandomBiGraph.h"
 
-RandomBiGraph(int nb, int nb2, float p) {
-    std::srand(std::time(0));
-    
+RandomBiGraph::RandomBiGraph(int nb1, int nb2, float p):
+	nb_sommet1(nb1), nb_sommet2(nb2), p(p){
+	left = new Node[nb1];
+	right = new Node[nb2];
+
 }
 
 
 RandomBiGraph::~RandomBiGraph() {
+	delete left;
+	delete right;
 }
 
