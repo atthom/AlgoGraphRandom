@@ -31,9 +31,6 @@ private:
     float p;
     Node* left;
     Node* right;
-    
-    Node right[nb_sommet2];
-    Edge right_edge[nb_sommet2];
 
 };
 

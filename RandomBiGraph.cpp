@@ -12,19 +12,23 @@
  */
 
 #include "RandomBiGraph.h"
+#include <time.h>
+#include <random>
+
+using namespace std;
 
 RandomBiGraph::RandomBiGraph(int nb1, int nb2, float p):
-	nb_sommet1(nb1), nb_sommet2(nb2), p(p){
-	left = new Node[nb1];
-	right = new Node[nb2];
-
-RandomBiGraph(int nb, int nb2, float p) {
-    std::srand(std::time(0));
+    nb_sommet1(nb1), nb_sommet2(nb2), p(p) {
+    
+    left = new Node[nb1];
+    right = new Node[nb2];
+    
+    srand(time(0));
     int percent = p*100;
     
-    for (int i = 0; i < nb; i++) {
+    for (int i = 0; i < nb1; i++) {
         for (int i = 0; i < nb2; i++) {
-            int random_val = std::rand() % percent;
+          //  int random_val = std::rand() % percent;
         }
     }
 
@@ -44,7 +48,7 @@ bool isPerfect() {
 }   
 
 RandomBiGraph::~RandomBiGraph() {
-	delete left;
-	delete right;
+    delete left;
+    delete right;
 }
 

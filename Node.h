@@ -15,17 +15,19 @@
 #define NODE_H
 
 #include <vector>
+using namespace std;
 
 class Node {
 public:
     Node(int id);
-    addSucc(Node);
+    Node();
+    void addSucc(Node n);
     
     virtual ~Node();
 private:
     // successors
     int id;
-    vector<Node> succ;
+    vector<int> succ;
 };
 
 #endif /* NODE_H */

@@ -16,9 +16,6 @@
 Edge::Edge() {
 }
 
-Edge::Edge(const Edge& orig) {
-}
-
 Edge::~Edge() {
 }
 
