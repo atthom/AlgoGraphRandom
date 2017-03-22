@@ -27,7 +27,8 @@ public:
 private:
     // successors
     int id;
-    vector<int> succ;
+    vector<Node> succ;
+    
 };
 
 #endif /* NODE_H */

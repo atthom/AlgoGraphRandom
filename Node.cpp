@@ -22,7 +22,7 @@ Node::Node(): id(0) {
 }
 
 void Node::addSucc(Node foo) {
-    //succ.insert(foo);
+    succ.push_back(foo);
 }
 
 Node::~Node() {

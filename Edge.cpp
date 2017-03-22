@@ -13,7 +13,7 @@
 
 #include "Edge.h"
 
-Edge::Edge() {
+Edge::Edge(Node n1, Node n2) : n1(n1), n2(n2) {
 }
 
 Edge::~Edge() {

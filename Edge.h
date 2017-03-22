@@ -13,15 +13,16 @@
 
 #ifndef EDGE_H
 #define EDGE_H
+#include "Node.h"
 
 class Edge {
 public:
-    Edge();
-
-    Edge(const Edge &orig);
+    Edge(Node n1,Node n2);
 
     virtual ~Edge();
 private:
+    Node n1;
+    Node n2;
 
 };
 

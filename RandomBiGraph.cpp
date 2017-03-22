@@ -14,6 +14,7 @@
 #include "RandomBiGraph.h"
 #include <time.h>
 #include <random>
+#include <iostream>
 
 using namespace std;
 
@@ -24,11 +25,17 @@ RandomBiGraph::RandomBiGraph(int nb1, int nb2, float p):
     right = new Node[nb2];
     
     srand(time(0));
-    int percent = p*100;
+    int threshold = p*100;
     
     for (int i = 0; i < nb1; i++) {
         for (int i = 0; i < nb2; i++) {
-          //  int random_val = std::rand() % percent;
+            int random_val = std::rand() % 100;
+            if(random_val > threshold) {
+                cout << random_val << endl;    
+                
+                
+                
+            } 
         }
     }
 
@@ -48,7 +55,7 @@ bool isPerfect() {
 }   
 
 RandomBiGraph::~RandomBiGraph() {
-    delete left;
-    delete right;
+   // delete left;
+   // delete right;
 }
 
