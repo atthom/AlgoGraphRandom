@@ -15,6 +15,8 @@
 #define RANDOMBIGRAPH_H
 
 #include "Node.h"
+#include "Edge.h"
+using namespace std;
 
 class RandomBiGraph {
 public:
@@ -31,6 +33,7 @@ private:
     float p;
     Node* left;
     Node* right;
+    vector<Edge> edges;
 
 };
 

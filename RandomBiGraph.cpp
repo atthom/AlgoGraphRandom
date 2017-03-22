@@ -12,6 +12,7 @@
  */
 
 #include "RandomBiGraph.h"
+#include "Edge.h"
 #include <time.h>
 #include <random>
 #include <iostream>
@@ -28,13 +29,15 @@ RandomBiGraph::RandomBiGraph(int nb1, int nb2, float p):
     int threshold = p*100;
     
     for (int i = 0; i < nb1; i++) {
-        for (int i = 0; i < nb2; i++) {
+        for (int j = 0; j < nb2; j++) {
             int random_val = std::rand() % 100;
-            if(random_val > threshold) {
+            if(random_val < threshold) {
                 cout << random_val << endl;    
                 
+                left[i].addSucc(right[j]);
                 
-                
+                edges.push_back(Edge(left[i], right[j]));
+         
             } 
         }
     }
