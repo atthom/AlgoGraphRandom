@@ -19,11 +19,15 @@
 using namespace std;
 
 class RandomBiGraph {
+    friend class Strategies;
+    
 public:
     RandomBiGraph(int nb, int nb2, float p);   
     bool isMaximum();
     bool isMaximal();
-    bool isPerfect();    
+    bool isPerfect(); 
+    Node* get_left();
+    Node* get_right();
     
     virtual ~RandomBiGraph();
     
@@ -34,6 +38,7 @@ private:
     Node* left;
     Node* right;
     vector<Edge> edges;
+    
 
 };
 

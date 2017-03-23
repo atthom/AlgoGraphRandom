@@ -45,6 +45,14 @@ RandomBiGraph::RandomBiGraph(int nb1, int nb2, float p):
 }
 
 
+Node* RandomBiGraph::get_left() {
+    return left;
+}
+
+Node* RandomBiGraph::get_right() {
+    return right;
+}
+
 bool RandomBiGraph::isMaximum() {
     
 }

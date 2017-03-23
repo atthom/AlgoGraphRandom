@@ -1,6 +1,7 @@
 #include <iostream>
 #include "RandomBiGraph.h"
 #include "RandomGraph.h"
+#include <list>
 
 int main (int argc, char *argv[]) {
     

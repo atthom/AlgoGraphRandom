@@ -22,11 +22,13 @@ public:
     Node(int id);
     Node();
     void addSucc(Node n);
+    vector<Node> getSucc();
+    int id;
     
     virtual ~Node();
 private:
+    
     // successors
-    int id;
     vector<Node> succ;
     
 };

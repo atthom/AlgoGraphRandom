@@ -21,9 +21,14 @@ Node::Node(): id(0) {
     
 }
 
+vector<Node> Node::getSucc() {
+    return succ;
+}
+
 void Node::addSucc(Node foo) {
     succ.push_back(foo);
 }
+
 
 Node::~Node() {
 }
