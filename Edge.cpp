@@ -16,6 +16,11 @@
 Edge::Edge(Node n1, Node n2) : n1(n1), n2(n2) {
 }
 
+ostream& operator<<(ostream& os, const Edge& e) {
+    os << "("<< e.n1 << "," << e.n2 << ")";
+    return os;
+}
+
 Edge::~Edge() {
 }
 

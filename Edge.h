@@ -15,10 +15,12 @@
 #define EDGE_H
 #include "Node.h"
 
+#include <iostream>
+
 class Edge {
 public:
     Edge(Node n1,Node n2);
-
+    friend ostream& operator<<(ostream& os, const Edge& e) ;
     virtual ~Edge();
 private:
     Node n1;

@@ -29,6 +29,8 @@ public:
     Node* get_left();
     Node* get_right();
     
+    
+    friend ostream& operator<<(ostream& os, const RandomBiGraph& graph) ;
     virtual ~RandomBiGraph();
     
 private:

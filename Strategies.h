@@ -22,6 +22,7 @@ public:
     void BFS(Node* U, int nb_sommet, int current_sommet, bool *visited);
     void DFSUtil(Node* U, int v, bool visited[]);
     void DFS(int v, bool *visited);
+    void Hongrois(RandomBiGraph G);
     void Hopcroft(RandomBiGraph G);
 private:
 

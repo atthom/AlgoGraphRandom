@@ -15,6 +15,7 @@
 #define NODE_H
 
 #include <vector>
+#include <iostream>
 using namespace std;
 
 class Node {
@@ -25,6 +26,7 @@ public:
     vector<Node> getSucc();
     int id;
     
+    friend ostream& operator<<(ostream& os, const Node& node); 
     virtual ~Node();
 private:
     

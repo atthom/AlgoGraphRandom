@@ -65,6 +65,28 @@ bool isPerfect() {
     
 }   
 
+ostream& operator<<(ostream& os, const RandomBiGraph& graph)  {
+    os << "left{";
+    for (int i=0; i< graph.nb_sommet1;i++) {
+        os << graph.left << ",";
+    }
+    os << "}\n";
+    
+    os << "right{";
+    for (int i=0; i< graph.nb_sommet2;i++) {
+        os << graph.right << ",";
+    }
+    os << "}\n";
+    os << "Edges{";
+    for(vector<Edge>::const_iterator j = graph.edges.begin() ; j != graph.edges.end(); ++j)   { 
+        os << *j;
+    }
+    os << "}\n";
+    
+    
+    return os;
+}
+
 RandomBiGraph::~RandomBiGraph() {
    // delete left;
    // delete right;

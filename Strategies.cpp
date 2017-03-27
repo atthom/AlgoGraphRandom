@@ -13,12 +13,46 @@
 
 #include "Strategies.h"
 #include "RandomBiGraph.h"
+#include <algorithm>
+
+using namespace std;
 
 Strategies::Strategies() {
 }
 
 
 Strategies::~Strategies() {
+}
+
+void Strategies::Hongrois(RandomBiGraph G) {
+    
+    // on place des edges randoms jusqu'a ce qu'on puisse plus
+    vector<Edge> edges_matched;
+    vector<Node> nodes_matched;
+    
+    vector<Edge> edges = G.edges;  
+    
+    for(int it = 0 ; it < G.nb_sommet1; ++it)   { 
+        Node current_node = G.left[it];
+        //nodes_matched.    
+        if(find(nodes_matched.begin(), nodes_matched.end(), current_node) != nodes_matched.end()) {
+            continue;
+        } else {
+            vector<Node> neighbor = current_node.getSucc();
+            for(vector<Node>::iterator j = neighbor.begin() ; j != neighbor.end(); ++j)   { 
+               if(find(nodes_matched.begin(), nodes_matched.end(), current_node) == neighbor.end()) {
+                   nodes_matched.push_back(j);
+                   nodes_matched.push_back(G.left[it]);
+                   edges_matched.push_back(new Edge(G.left[it], j));                   
+                   break;
+               }
+            }            
+        }
+    }
+    
+    
+    
+    
 }
 
 

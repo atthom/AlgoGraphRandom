@@ -13,12 +13,12 @@
 
 #include "Node.h"
 
-Node::Node(int id): id(id) {
-    
+Node::Node(int id) : id(id) {
+
 }
 
-Node::Node(): id(0) {
-    
+Node::Node() : id(0) {
+
 }
 
 vector<Node> Node::getSucc() {
@@ -27,6 +27,11 @@ vector<Node> Node::getSucc() {
 
 void Node::addSucc(Node foo) {
     succ.push_back(foo);
+}
+
+ostream& operator<<(ostream& os, const Node& node) {
+    os << node.id;
+    return os;
 }
 
 
