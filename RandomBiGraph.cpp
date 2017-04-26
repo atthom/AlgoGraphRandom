@@ -12,10 +12,7 @@
  */
 
 #include "RandomBiGraph.h"
-#include "Edge.h"
-#include <time.h>
 #include <random>
-#include <iostream>
 
 using namespace std;
 

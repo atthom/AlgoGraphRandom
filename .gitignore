@@ -1,4 +1,10 @@
 cmake-build-debug
+*.cbp
+*.cmake
+CMakeCache.txt
+Makefile
+CMakeFiles
+AlgoGraphRandom.exe
 
 # Created by .ignore support plugin (hsz.mobi)
 ### VisualStudio template
@@ -328,4 +334,3 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
-

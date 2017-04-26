@@ -14,6 +14,9 @@
 #ifndef STRATEGIES_H
 #define STRATEGIES_H
 
+#include "Node.h"
+#include "RandomBiGraph.h"
+
 class Strategies {
 
 public:

@@ -26,7 +26,8 @@ public:
     vector<Node> getSucc();
     int id;
     
-    friend ostream& operator<<(ostream& os, const Node& node); 
+    friend ostream& operator<<(ostream& os, const Node& node);
+    bool operator==(const Node& node);
     virtual ~Node();
 private:
     

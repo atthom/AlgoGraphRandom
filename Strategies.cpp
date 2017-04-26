@@ -12,8 +12,8 @@
  */
 
 #include "Strategies.h"
-#include "RandomBiGraph.h"
 #include <algorithm>
+#include <list>
 
 using namespace std;
 
@@ -41,17 +41,14 @@ void Strategies::Hongrois(RandomBiGraph G) {
             vector<Node> neighbor = current_node.getSucc();
             for(vector<Node>::iterator j = neighbor.begin() ; j != neighbor.end(); ++j)   { 
                if(find(nodes_matched.begin(), nodes_matched.end(), current_node) == neighbor.end()) {
-                   nodes_matched.push_back(j);
+                   nodes_matched.push_back(*j);
                    nodes_matched.push_back(G.left[it]);
-                   edges_matched.push_back(new Edge(G.left[it], j));                   
+                   edges_matched.push_back({G.left[it], *j});
                    break;
                }
             }            
         }
     }
-    
-    
-    
     
 }
 
@@ -91,7 +88,7 @@ void Strategies::BFS(Node* U, int nb_sommet, int current_sommet, bool *visited) 
     }
     
 }
-
+/*
 void Strategies::DFSUtil(Node* U, int v, bool visited[])
 {
     // Mark the current node as visited and print it
@@ -144,3 +141,4 @@ void Strategies::Hopcroft(RandomBiGraph G) {
         }
     }
 }
+*/

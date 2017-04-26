@@ -34,7 +34,11 @@ ostream& operator<<(ostream& os, const Node& node) {
     return os;
 }
 
+bool Node::operator==(const Node &node) {
+    return this->id == node.id;
+}
 
 Node::~Node() {
 }
+
 
