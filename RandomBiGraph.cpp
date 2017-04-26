@@ -29,7 +29,6 @@ RandomBiGraph::RandomBiGraph(int nb1, int nb2, float p):
         for (int j = 0; j < nb2; j++) {
             int random_val = std::rand() % 100;
             if(random_val < threshold) {
-                cout << random_val << endl;    
                 
                 left[i].addSucc(right[j]);
                 

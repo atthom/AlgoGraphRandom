@@ -14,6 +14,6 @@ set(SOURCE_FILES
         RandomGraph.cpp
         RandomGraph.h
         Strategies.cpp
-        Strategies.h)
+        Strategies.h Matrix.cpp Matrix.h)
 
 add_executable(AlgoGraphRandom ${SOURCE_FILES})
