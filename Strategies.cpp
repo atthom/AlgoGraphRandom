@@ -46,7 +46,7 @@ void Strategies::Hongrois(RandomBiGraph G) {
                    edges_matched.push_back({G.left[it], *j});
                    break;
                }
-            }            
+            }
         }
     }
     

@@ -4,11 +4,12 @@
 
 #include "Matrix.h"
 
+
 Matrix::Matrix(unsigned int nx, unsigned int ny, int value) :
-        matrix(nx,{ny,value}),nx(nx),ny(ny){}
+        matrix(nx, {ny,value}), nx(nx), ny(ny) {}
 
 Matrix::Matrix(const Matrix &matrix) :
-        matrix(matrix.matrix),nx(matrix.nx),ny(matrix.ny){}
+        matrix(matrix.matrix), nx(matrix.nx), ny(matrix.ny){}
 
 void Matrix::set(unsigned int x, unsigned int y, int value) {
     matrix.at(x).at(y) = value;
@@ -28,5 +29,21 @@ vector<int> Matrix::selectRow(unsigned int y) {
         v.at(x) = matrix.at(x).at(y);
     }
     return v;
+}
+
+
+ostream& operator<<(ostream& os, Matrix& M)  {
+    os << "\n(" << M.nx << ", " << M.ny << ")\n";
+
+    for (int i=0; i< M.nx; i++) {
+
+        vector<int> row = M.selectRow(0);
+        os << "{ ";
+        for (auto j: row)
+            os << j << ", ";
+        os << "}\n";
+    }
+
+    return os;
 }
 
