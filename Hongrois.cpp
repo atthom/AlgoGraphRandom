@@ -20,10 +20,10 @@ Hongrois::Hongrois(Matrix M) {
 }
 
 
-Hongrois::Hongrois(RandomBiGraph G) {
+Hongrois::Hongrois(RandomBiGraph G) :
+        Hongrois(BiGraph2Matrix(G)) {}
 
-    Node* left = G.get_left();
-    Node* right = G.get_right();
+Matrix Hongrois::BiGraph2Matrix(RandomBiGraph G) {
 
     Matrix mat = Matrix(G.nb_sommet1, G.nb_sommet2, 0);
 
@@ -43,7 +43,7 @@ Hongrois::Hongrois(RandomBiGraph G) {
         }
     }
 
-
+    return mat;
 }
 
 void Hongrois::step1(Matrix M) {
@@ -52,9 +52,7 @@ void Hongrois::step1(Matrix M) {
         vector<int> row = M.selectRow(i);
 
         vector<int>::iterator smaller = min_element(begin(row), end(row));
-        cout << *smaller << " \n";
         *smaller = 0;
-        cout << *smaller << " \n";
     }
 }
 

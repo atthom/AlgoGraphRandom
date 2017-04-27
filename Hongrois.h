@@ -19,9 +19,11 @@ public:
     Hongrois(RandomBiGraph G);
     Hongrois(Matrix M);
 
+
 private:
 
     void step1(Matrix M);
+    Matrix BiGraph2Matrix(RandomBiGraph G);
     Matrix step2(Matrix M);
     Matrix step3(Matrix M);
 
