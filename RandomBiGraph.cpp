@@ -28,16 +28,21 @@ RandomBiGraph::RandomBiGraph(int nb1, int nb2, float p):
     for (int i = 0; i < nb1; i++) {
         for (int j = 0; j < nb2; j++) {
             int random_val = std::rand() % 100;
+
+            left[i].id = i;
+            right[j].id = j;
+
             if(random_val < threshold) {
-                
                 left[i].addSucc(right[j]);
-                
                 edges.push_back(Edge(left[i], right[j]));
-         
             } 
         }
     }
 
+}
+
+vector<Edge> RandomBiGraph::get_edges() {
+    return edges;
 }
 
 
@@ -78,7 +83,6 @@ ostream& operator<<(ostream& os, const RandomBiGraph& graph)  {
         os << *j;
     }
     os << "}\n";
-    
     
     return os;
 }

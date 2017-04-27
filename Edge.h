@@ -20,6 +20,8 @@
 class Edge {
 public:
     Edge(Node n1,Node n2);
+    int getIDn1();
+    int getIDn2();
     friend ostream& operator<<(ostream& os, const Edge& e) ;
     virtual ~Edge();
 private:

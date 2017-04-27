@@ -28,14 +28,15 @@ public:
     bool isPerfect(); 
     Node* get_left();
     Node* get_right();
-    
-    
+    vector<Edge> get_edges();
+
     friend ostream& operator<<(ostream& os, const RandomBiGraph& graph) ;
     virtual ~RandomBiGraph();
-    
-private:
+
     const int nb_sommet1;
     const int nb_sommet2;
+    
+private:
     float p;
     Node* left;
     Node* right;

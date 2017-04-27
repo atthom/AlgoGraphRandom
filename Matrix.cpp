@@ -6,7 +6,7 @@
 
 
 Matrix::Matrix(unsigned int nx, unsigned int ny, int value) :
-        matrix(nx, {ny,value}), nx(nx), ny(ny) {}
+        matrix(nx, vector<int>(ny,value)), nx(nx), ny(ny) {}
 
 Matrix::Matrix(const Matrix &matrix) :
         matrix(matrix.matrix), nx(matrix.nx), ny(matrix.ny){}
@@ -35,9 +35,9 @@ vector<int> Matrix::selectRow(unsigned int y) {
 ostream& operator<<(ostream& os, Matrix& M)  {
     os << "\n(" << M.nx << ", " << M.ny << ")\n";
 
-    for (int i=0; i< M.nx; i++) {
+    for (unsigned int i=0; i< M.nx; i++) {
 
-        vector<int> row = M.selectRow(0);
+        vector<int> row = M.selectRow(i);
         os << "{ ";
         for (auto j: row)
             os << j << ", ";

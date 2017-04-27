@@ -24,3 +24,10 @@ ostream& operator<<(ostream& os, const Edge& e) {
 Edge::~Edge() {
 }
 
+int Edge::getIDn1() {
+    return n1.id;
+}
+
+int Edge::getIDn2() {
+    return n2.id;
+}
