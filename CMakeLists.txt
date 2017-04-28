@@ -13,7 +13,7 @@ set(SOURCE_FILES
         RandomBiGraph.h
         RandomGraph.cpp
         RandomGraph.h
-        Strategies.cpp
-        Strategies.h Matrix.cpp Matrix.h)
+        Hopcroft.cpp
+        Hopcroft.h Matrix.cpp Matrix.h BipartGraph.cpp BipartGraph.h)
 
 add_executable(AlgoGraphRandom ${SOURCE_FILES})
