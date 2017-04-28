@@ -19,8 +19,6 @@ set(SOURCE_FILES
         Matrix.h
         BipartGraph.cpp
         BipartGraph.h
-        Strategies.cpp
-        Strategies.h
         Hongrois.cpp
         Hongrois.h)
 
