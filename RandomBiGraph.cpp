@@ -16,30 +16,29 @@
 
 using namespace std;
 
-RandomBiGraph::RandomBiGraph(int nb1, int nb2, float p):
+RandomBiGraph::RandomBiGraph(unsigned int nb1,unsigned int nb2, float p):
     nb_sommet1(nb1), nb_sommet2(nb2), p(p) {
     
     left = new Node[nb1];
     right = new Node[nb2];
     
     srand(time(0));
-    int threshold = p*100;
+    int threshold = (int)p*100;
     
-    for (int i = 0; i < nb1; i++) {
-        for (int j = 0; j < nb2; j++) {
+    for (unsigned int i = 0; i < nb1; i++) {
+        for (unsigned int j = 0; j < nb2; j++) {
+            left[i].id = i;
+            right[j].id = j;
+
             int random_val = std::rand() % 100;
             if(random_val < threshold) {
-                
                 left[i].addSucc(right[j]);
-                
                 edges.push_back(Edge(left[i], right[j]));
-         
             } 
         }
     }
 
 }
-
 
 Node* RandomBiGraph::get_left() {
     return left;
@@ -78,7 +77,6 @@ ostream& operator<<(ostream& os, const RandomBiGraph& graph)  {
         os << *j;
     }
     os << "}\n";
-    
     
     return os;
 }

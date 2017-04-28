@@ -14,6 +14,14 @@ set(SOURCE_FILES
         RandomGraph.cpp
         RandomGraph.h
         Hopcroft.cpp
-        Hopcroft.h Matrix.cpp Matrix.h BipartGraph.cpp BipartGraph.h)
+        Hopcroft.h
+        Matrix.cpp
+        Matrix.h
+        BipartGraph.cpp
+        BipartGraph.h
+        Strategies.cpp
+        Strategies.h
+        Hongrois.cpp
+        Hongrois.h)
 
 add_executable(AlgoGraphRandom ${SOURCE_FILES})

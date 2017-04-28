@@ -6,13 +6,15 @@
 #define ALGOGRAPHRANDOM_MATRIX_H
 
 #include <vector>
+#include <iostream>
 using std::vector;
+using std::ostream;
 
 class Matrix {
 private:
-    unsigned int nx;
-    unsigned int ny;
+
     vector<vector<int>> matrix;
+    friend ostream& operator<<(ostream& os, Matrix& M) ;
 public:
     Matrix(const Matrix& matrix);
     Matrix(unsigned int nx, unsigned int ny, int value = 0);
@@ -20,6 +22,9 @@ public:
     int get(unsigned int x, unsigned int y);
     vector<int> selectRow(unsigned int y);
     vector<int> selectColumn(unsigned int x);
+
+    unsigned int nx;
+    unsigned int ny;
 };
 
 

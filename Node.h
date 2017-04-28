@@ -24,7 +24,7 @@ public:
     Node();
     void addSucc(Node n);
     vector<Node> getSucc();
-    int id;
+    unsigned int id;
     
     friend ostream& operator<<(ostream& os, const Node& node);
     bool operator==(const Node& node);

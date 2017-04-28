@@ -22,20 +22,20 @@ class RandomBiGraph {
     friend class Strategies;
     
 public:
-    RandomBiGraph(int nb, int nb2, float p);   
+    RandomBiGraph(unsigned int nb, unsigned int nb2, float p);
     bool isMaximum();
     bool isMaximal();
     bool isPerfect(); 
     Node* get_left();
     Node* get_right();
-    
-    
+
     friend ostream& operator<<(ostream& os, const RandomBiGraph& graph) ;
     virtual ~RandomBiGraph();
+
+    const unsigned int nb_sommet1;
+    const unsigned int nb_sommet2;
     
 private:
-    const int nb_sommet1;
-    const int nb_sommet2;
     float p;
     Node* left;
     Node* right;
