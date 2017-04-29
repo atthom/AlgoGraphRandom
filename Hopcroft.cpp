@@ -1,19 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/* 
- * File:   Hopcroft.cpp
- * Author: chronos
- * 
- * Created on March 23, 2017, 1:39 AM
- */
-
 
 #include "Hopcroft.h"
-
 
 #include <queue>
 using std::queue;
@@ -28,7 +14,7 @@ Hopcroft::Hopcroft(const BipartGraph &graph):
         Pair_V(graph.nv,nil),
         Dist(graph.nu+1){}
 
-unsigned int Hopcroft::compute() {
+unsigned int Hopcroft::matching() {
     unsigned int matching = 0;
     while(BFS()){
         for (node_u u = 0; u < graph.nu; ++u) {

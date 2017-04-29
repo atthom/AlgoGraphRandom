@@ -19,7 +19,7 @@ BipartGraph::BipartGraph(unsigned int nu, unsigned int nv, double probability):
 
     //std::cout << "p: " << probability << std::endl;
     //std::cout << "MAX: " << RAND_MAX << std::endl;
-    srand(time(0));
+
     for (node_u u = 0; u < nu; ++u) {
         for (node_v v = 0; v < nv; ++v) {
             unsigned int r = rand();
