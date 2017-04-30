@@ -3,6 +3,8 @@ project(AlgoGraphRandom)
 
 set(CMAKE_CXX_STANDARD 11)
 
+set(CMAKE_CXX_FLAGS "-O3")
+
 set(SOURCE_FILES
         Edge.cpp
         Edge.h
@@ -20,6 +22,16 @@ set(SOURCE_FILES
         BipartGraph.cpp
         BipartGraph.h
         Hongrois.cpp
-        Hongrois.h)
+        Hongrois.h
+        blossom/Graph.cpp
+        blossom/Graph.h
+        blossom/BlossomAlgo.cpp
+        blossom/BlossomAlgo.h
+        blossom/NodeInfo.cpp
+        blossom/NodeInfo.h
+        blossom/Edge.cpp
+        blossom/Edge.h
+        blossom/Blossom.cpp
+        blossom/Blossom.h)
 
 add_executable(AlgoGraphRandom ${SOURCE_FILES})

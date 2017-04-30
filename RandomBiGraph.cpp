@@ -21,8 +21,7 @@ RandomBiGraph::RandomBiGraph(unsigned int nb1,unsigned int nb2, float p):
     
     left = new Node[nb1];
     right = new Node[nb2];
-    
-    srand(time(0));
+
     int threshold = (int)p*100;
     
     for (unsigned int i = 0; i < nb1; i++) {
