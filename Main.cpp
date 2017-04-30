@@ -50,5 +50,4 @@ int main (int argc, char *argv[]) {
     srand(std::time(0));
     hopcroft(500,1000);
     blossom(1000,1000);
-
 }
