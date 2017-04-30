@@ -2,7 +2,6 @@
 #ifndef HOPCROFT_H
 #define HOPCROFT_H
 
-#include "RandomBiGraph.h"
 #include "BipartGraph.h"
 
 class Hopcroft {
@@ -17,7 +16,6 @@ private:
     bool DFS(node_u u);
 public:
     Hopcroft(const BipartGraph& graph);
-
     unsigned int matching();
 
 };
